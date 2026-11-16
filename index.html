@@ -119,6 +119,77 @@
             color: var(--primary);
         }
 
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.95rem;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+            background: var(--bg-secondary);
+            text-decoration: none;
+        }
+
+        .nav-links a.active {
+            color: var(--primary);
+            background: var(--bg-secondary);
+            font-weight: 600;
+        }
+
+        .badge-trader {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 6px;
+            background: #e8f0fe;
+            color: #1a73e8;
+            margin-bottom: 12px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .badge-trader {
+                background: #1e3a5f;
+                color: #8ab4f8;
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 12px;
+            border: 1px solid var(--border);
+        }
+
+        th {
+            background: var(--bg-secondary);
+            font-weight: 600;
+        }
+
         footer {
             margin-top: 48px;
             padding-top: 24px;
@@ -132,8 +203,13 @@
 
 <body>
     <div class="container">
+        <nav class="nav-links">
+            <a href="https://sumitkahar992.github.io/capsule_notes_TermsOfUse/" class="active">Terms of Service</a>
+            <a href="https://sumitkahar992.github.io/capsule_notes_privacy/">Privacy Policy</a>
+        </nav>
+
         <h1>Terms of Service</h1>
-        <p class="last-updated">Last Updated: March 4, 2026</p>
+        <p class="last-updated">Last Updated: November 16, 2026</p>
 
         <div class="highlight-box">
             <p>Please read these Terms of Service ("Terms") carefully before using <strong>Capsule Notes</strong> ("the
@@ -145,182 +221,184 @@
         <p>Capsule Notes is a note-taking application for Android that allows you to create, organize, and manage
             personal notes. The App offers:</p>
         <ul>
-            <li><strong>Free Tier:</strong> Core note-taking features including text notes, checklists, tags (up to 5),
-                reminders (up to 3 active), home screen widgets, and local backup/restore</li>
-            <li><strong>Pro Subscription:</strong> Premium features including unlimited tags, unlimited reminders, note
-                locking, custom themes, advanced export, and cloud backup/sync</li>
+            <li><strong>Free Tier:</strong> Unlimited text notes and checklists, up to 5 tags, up to 3 active reminders,
+                Quick Capture widget access, local <code>.nbx</code> backup and restore, and standard text sharing/export</li>
+            <li><strong>Capsule Notes Pro (Subscription or One-Time Lifetime Purchase):</strong> Premium features
+                including unlimited tags, unlimited reminders, image and voice note attachments, configurable Single Note
+                and Note List home screen widgets, Graph visualization, biometric App Lock and Note Lock, custom editor
+                fonts, advanced PDF/Markdown/HTML note export, and optional Cloud Sync via Google Sign-In</li>
         </ul>
 
         <h2>2. Acceptance of Terms</h2>
         <p>By using Capsule Notes, you confirm that you:</p>
         <ul>
-            <li>Are at least 13 years of age (or the minimum age required in your jurisdiction)</li>
+            <li>Are at least 13 years of age (or the minimum digital consent age required in your jurisdiction)</li>
             <li>Have the legal capacity to enter into these Terms</li>
             <li>Will use the App in compliance with all applicable laws and regulations</li>
         </ul>
-        <p>If you are under 18, you confirm that you have obtained parental or guardian consent to use the App.</p>
+        <p>If you are under 18, you confirm that you have obtained parental or guardian consent to use the App and make purchases where applicable.</p>
 
-        <h2>3. User Accounts and Cloud Sync</h2>
+        <div class="badge-trader">EU Digital Services Act (DSA) Compliance</div>
+        <h2>3. Trader Status &amp; EU/UK Regulatory Disclosures</h2>
+        <p>In accordance with the <strong>European Union Digital Services Act (Regulation (EU) 2022/2065, "DSA")</strong> (Articles 30 and 31), the EU Consumer Rights Directive (Directive 2011/83/EU), and the <strong>UK Digital Markets, Competition and Consumers Act 2024</strong>:</p>
 
-        <h3>3.1 Google Sign-In</h3>
-        <p>Pro subscribers may sign in with their Google account to enable cloud sync. By signing in, you authorize us
-            to access your basic Google profile information (name, email address, and profile photo) solely for the
-            purpose of identifying your account.</p>
+        <h3>3.1 Trader Declaration</h3>
+        <p><strong>Capsule Notes</strong> is published, distributed, and operated by <strong>Sumit Kahar</strong>, acting as an individual commercial developer / <strong>Trader</strong> in relation to the provision of the application, digital features, recurring Pro subscriptions, and one-time Lifetime purchases.</p>
 
-        <h3>3.2 Cloud Backup and Sync</h3>
-        <p>Cloud sync is available exclusively to Pro subscribers. When enabled:</p>
+        <h3>3.2 Self-Certification of Compliance (DSA Article 30(1)(e))</h3>
+        <p>The developer self-certifies that Capsule Notes, including all software, digital content, and paid services provided through Google Play, complies with applicable rules of European Union law and mandatory consumer protection standards.</p>
+
+        <h3>3.3 Contact and Traceability</h3>
+        <p>Pursuant to DSA traceability requirements, full trader identification details (legal name, geographical postal address, telephone number, and support email) are permanently maintained in Section 17 ("Contact Us &amp; Legal Notice / Impressum") of these Terms and displayed on the official Google Play Store listing for users in the European Economic Area (EEA) and the United Kingdom.</p>
+
+        <h2>4. User Accounts and Cloud Sync</h2>
+
+        <h3>4.1 Google Sign-In</h3>
+        <p>Pro users may optionally sign in with their Google account to enable Cloud Sync. By signing in, you authorize us
+            to access your basic Google profile information (Firebase User ID, display name, email address, and profile photo URL) solely to authenticate your account and isolate your cloud data, as explained in our <a href="https://sumitkahar992.github.io/capsule_notes_privacy/">Privacy Policy</a>.</p>
+
+        <h3>4.2 Cloud Backup and Sync</h3>
+        <p>Cloud Sync is available exclusively to Pro users (including active trial, subscription, or Lifetime entitlement holders). When enabled:</p>
         <ul>
-            <li>Your notes, checklists, tags, and attachments (images and voice recordings) are synced to cloud storage
-                via Firebase</li>
-            <li>Data is stored in your personal, isolated cloud space and is not accessible to other users</li>
-            <li>Sync occurs automatically when your device is connected to the internet</li>
-            <li>You remain responsible for the content you sync to the cloud</li>
+            <li>Your notes, checklists, tags, and attachments (images and voice recordings) are synced to cloud storage via Firebase (Cloud Firestore &amp; Firebase Storage)</li>
+            <li>Data is stored in your personal, user-isolated cloud space protected by Firebase Security Rules and Firebase App Check</li>
+            <li>Sync runs automatically in the background or manually when your device has network connectivity</li>
+            <li>You remain solely responsible for the content you create and sync to the cloud</li>
         </ul>
-        <p>Free-tier users' data remains stored exclusively on their device. Local backup and restore features are
-            available to all users.</p>
+        <p>Free-tier users' note data remains stored exclusively on their device. Local backup and restore (<code>.nbx</code>) is available to all users.</p>
 
-        <h2>4. Subscriptions and Billing</h2>
+        <h3>4.3 Account and Cloud Data Deletion</h3>
+        <p>You may sign out of Cloud Sync at any time in App settings or request permanent deletion of your Firebase Authentication account and all synced cloud data by emailing <a href="mailto:sumitkahar073@gmail.com">sumitkahar073@gmail.com</a> from your registered email address.</p>
 
-        <h3>4.1 Pro Subscription</h3>
-        <p>The Pro subscription is offered through Google Play and managed by RevenueCat. Subscription details,
-            including pricing and billing periods, are displayed in the App before purchase.</p>
+        <h2>5. Pro Plans, Subscriptions, Lifetime Purchases &amp; Consumer Rights</h2>
 
-        <h3>4.2 Payment and Renewal</h3>
+        <h3>5.1 Pro Subscriptions &amp; One-Time Lifetime Purchase</h3>
+        <p>Capsule Notes Pro may be offered via recurring auto-renewing subscriptions (such as weekly, monthly, or annual plans, with an optional free trial where indicated) or as a one-time Lifetime purchase. Exact pricing, billing intervals, trial duration, and included features are clearly displayed inside the App and on the Google Play checkout sheet prior to purchase.</p>
+
+        <h3>5.2 Payment and Auto-Renewal (Subscriptions)</h3>
         <ul>
-            <li>Payment is charged to your Google Play account upon confirmation of purchase</li>
-            <li>Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current
-                billing period</li>
-            <li>Your account will be charged for renewal within 24 hours prior to the end of the current period at the
-                same rate</li>
+            <li>Payment is processed and charged to your Google Play account upon purchase confirmation (or after any applicable free trial ends, unless cancelled before the trial expires)</li>
+            <li>Recurring subscriptions automatically renew unless cancelled at least 24 hours before the end of the current billing period</li>
+            <li>Your Google Play account is charged for renewal within 24 hours prior to the end of the current billing period at the disclosed plan price</li>
+            <li>A one-time Lifetime purchase grants ongoing access to Pro features for the active life of the Capsule Notes Android app without recurring charges</li>
         </ul>
 
-        <h3>4.3 Cancellation</h3>
+        <h3>5.3 Cancellation</h3>
         <ul>
-            <li>You may cancel your subscription at any time through Google Play Store &gt; Subscriptions</li>
-            <li>Cancellation takes effect at the end of the current billing period</li>
-            <li>You will retain access to Pro features until the end of your paid period</li>
-            <li>No partial refunds are provided for unused portions of a subscription period</li>
+            <li>You may cancel a recurring subscription or free trial at any time through <strong>Google Play Store &gt; Payments &amp; subscriptions &gt; Subscriptions</strong></li>
+            <li>Cancellation stops future renewals and takes effect at the end of the current paid period or trial</li>
+            <li>You retain access to Pro features until the end of your current paid billing period</li>
         </ul>
 
-        <h3>4.4 Refunds</h3>
-        <p>Refund requests are handled by Google Play in accordance with their <a
-                href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">refund
-                policy</a>. We do not process refunds directly.</p>
+        <h3>5.4 Refunds &amp; Google Play Billing Handling</h3>
+        <p>All payments are processed by Google Play Billing as the marketplace and payment processor. Refund requests are evaluated and handled in accordance with the <a
+                href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">Google Play Refund Policy</a> and applicable mandatory consumer laws.</p>
 
-        <h3>4.5 Free Tier Limitations</h3>
-        <p>Free-tier users are subject to the following limitations:</p>
+        <h3>5.5 Statutory Right of Withdrawal (EEA &amp; UK Consumers)</h3>
+        <p>If you are a consumer residing in the European Economic Area (EEA) or the United Kingdom, statutory consumer law (including Directive 2011/83/EU) generally provides a 14-day right to withdraw from online purchase contracts without giving a reason, subject to statutory rules for digital content and digital services:</p>
+        <ul>
+            <li><strong>Immediate Digital Performance (Art. 16(m) Directive 2011/83/EU):</strong> When purchasing immediate access to Pro digital features or digital content via Google Play, you acknowledge the checkout terms presented by Google Play regarding immediate supply and any applicable loss or adjustment of the withdrawal right upon immediate performance.</li>
+            <li><strong>Exercising Withdrawal or Refund Rights:</strong> Because Google Play processes payments and order histories as merchant of record, you may submit withdrawal or refund requests directly via <a href="https://play.google.com/store/account/orderhistory" target="_blank" rel="noopener">Google Play Order History</a> or Google Play Support.</li>
+            <li>You may also contact us at <a href="mailto:sumitkahar073@gmail.com">sumitkahar073@gmail.com</a> if you need assistance verifying an order or entitlement issue.</li>
+        </ul>
+
+        <h3>5.6 Legal Guarantee of Conformity</h3>
+        <p>Under Directive (EU) 2019/770 (and equivalent UK consumer legislation such as the Consumer Rights Act 2015 and the Digital Markets, Competition and Consumers Act 2024), consumers benefit from statutory legal guarantees of conformity for digital content and digital services, including updates reasonably necessary to maintain conformity. Nothing in these Terms restricts these mandatory statutory rights.</p>
+
+        <h3>5.7 Free Tier Limitations</h3>
+        <p>Free-tier users are subject to feature limits clearly shown on the in-app comparison screen:</p>
         <ul>
             <li>Maximum of 5 tags</li>
             <li>Maximum of 3 active reminders</li>
-            <li>Cloud sync is not available</li>
+            <li>Pro-exclusive features (image/voice notes, configurable Single Note and Note List widgets, Graph view, App Lock &amp; Note Lock, custom fonts, PDF/Markdown/HTML export, and Cloud Sync) require an active Pro entitlement</li>
         </ul>
 
-        <h2>5. User Content</h2>
+        <h2>6. User Content</h2>
 
-        <h3>5.1 Ownership</h3>
-        <p>You retain all rights to the content you create within Capsule Notes. We do not claim ownership of your
-            notes, checklists, attachments, or any other content you produce.</p>
+        <h3>6.1 Ownership</h3>
+        <p>You retain all ownership and intellectual property rights to the content you create within Capsule Notes. We do not claim ownership of your notes, checklists, tags, or attachments.</p>
 
-        <h3>5.2 Responsibility</h3>
+        <h3>6.2 Responsibility</h3>
         <p>You are solely responsible for:</p>
         <ul>
-            <li>The content you create, store, and (if applicable) sync to the cloud</li>
-            <li>Maintaining backups of your important data</li>
-            <li>Ensuring your content does not violate any applicable laws</li>
+            <li>The content you create, store, export, or sync to the cloud</li>
+            <li>Maintaining regular backups of your important data (via local <code>.nbx</code> backup or Pro Cloud Sync)</li>
+            <li>Ensuring your content does not violate any applicable laws or third-party rights</li>
         </ul>
 
-        <h3>5.3 Data Loss</h3>
-        <p>While we take reasonable measures to protect your data, we are not responsible for any loss of data due to
-            device failure, app uninstallation, software bugs, or other circumstances beyond our reasonable control. We
-            strongly recommend using the backup feature regularly.</p>
+        <h3>6.3 Data Loss</h3>
+        <p>While we take reasonable technical measures to protect your data, software bugs, device failure, or uninstallation can occur. Always keep independent backups of critical information. Nothing in this section limits your non-waivable statutory consumer remedies.</p>
 
-        <h2>6. Acceptable Use</h2>
+        <h2>7. Acceptable Use</h2>
         <p>You agree not to use Capsule Notes to:</p>
         <ul>
-            <li>Store, transmit, or distribute any content that is illegal, harmful, or violates the rights of others
-            </li>
-            <li>Attempt to reverse-engineer, decompile, or disassemble the App</li>
-            <li>Circumvent or manipulate subscription or billing mechanisms</li>
-            <li>Use the App in any manner that could damage, disable, or impair our services</li>
-            <li>Attempt to gain unauthorized access to any systems or networks connected to the App</li>
+            <li>Store, transmit, or distribute content that is illegal, harmful, or infringes the rights of others</li>
+            <li>Attempt to reverse-engineer, decompile, or disassemble the App, except to the extent expressly permitted by mandatory law</li>
+            <li>Circumvent, spoof, or manipulate subscription, entitlement, or billing mechanisms</li>
+            <li>Use the App in a manner that could damage, overload, or impair our cloud or authentication infrastructure</li>
+            <li>Attempt unauthorized access to systems, Firebase instances, or another user's data</li>
         </ul>
 
-        <h2>7. Intellectual Property</h2>
-        <p>Capsule Notes, including its design, code, icons, and branding, is the intellectual property of the
-            developer. You are granted a limited, non-exclusive, non-transferable, revocable license to use the App for
-            personal, non-commercial purposes in accordance with these Terms.</p>
-        <p>You may not copy, modify, distribute, sell, or create derivative works based on the App without prior written
-            consent.</p>
+        <h2>8. Intellectual Property</h2>
+        <p>Capsule Notes, including its software code, design, icons, UI, and branding, is the intellectual property of <strong>Sumit Kahar</strong>. You are granted a limited, non-exclusive, non-transferable, revocable license to install and use the App for personal, non-commercial use in accordance with these Terms and the Google Play Terms of Service.</p>
+        <p>You may not copy, modify, redistribute, sell, or create derivative works based on the App without prior written consent.</p>
 
-        <h2>8. Third-Party Services</h2>
-        <p>The App integrates with the following third-party services, each governed by their own terms:</p>
+        <h2>9. Third-Party Services</h2>
+        <p>The App integrates with third-party services governed by their own terms:</p>
         <ul>
-            <li><a href="https://play.google.com/intl/en_us/about/play-terms/" target="_blank" rel="noopener">Google
-                    Play Services</a> — App distribution and billing</li>
-            <li><a href="https://www.revenuecat.com/terms" target="_blank" rel="noopener">RevenueCat</a> — Subscription
-                management</li>
-            <li><a href="https://firebase.google.com/terms" target="_blank" rel="noopener">Firebase</a> —
-                Authentication, cloud sync (Pro subscribers), and crash reporting</li>
+            <li><a href="https://play.google.com/intl/en_us/about/play-terms/" target="_blank" rel="noopener">Google Play Terms of Service</a> — App distribution, billing, and Play Integrity</li>
+            <li><a href="https://www.revenuecat.com/terms" target="_blank" rel="noopener">RevenueCat Terms of Service</a> — Subscription and purchase entitlement management</li>
+            <li><a href="https://firebase.google.com/terms" target="_blank" rel="noopener">Firebase Terms of Service</a> — Authentication, Cloud Sync (Pro), Crashlytics, Analytics, and App Check</li>
         </ul>
-        <p>We are not responsible for the practices or policies of these third-party services.</p>
+        <p>We are not responsible for the independent terms or operational availability of third-party services.</p>
 
-        <h2>9. Disclaimers</h2>
-        <p>The App is provided on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis without
-            warranties of any kind, whether express or implied, including but not limited to implied warranties of
-            merchantability, fitness for a particular purpose, and non-infringement.</p>
-        <p>We do not warrant that:</p>
+        <h2>10. Disclaimers</h2>
+        <p>Except to the extent prohibited by mandatory applicable law (including the statutory legal guarantees of conformity described in Section 5.6), the App is provided on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis without warranties of any kind, whether express or implied, including implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+        <p>Subject to applicable law, we do not guarantee that the App will be uninterrupted, completely error-free, or compatible with every device or future Android version indefinitely.</p>
+
+        <h2>11. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by applicable law, the developer shall not be liable for indirect, incidental, special, consequential, or punitive damages, including loss of data or lost profits, arising out of or in connection with your use of the App.</p>
+        <p>To the extent permitted by law, the developer's aggregate liability for claims arising under these Terms shall not exceed the total amount you paid for the App or Pro features in the twelve (12) months preceding the claim. <strong>Nothing in these Terms excludes or limits liability that cannot legally be excluded or limited under mandatory local law (including liability for fraud, gross negligence where non-excludable, personal injury, or mandatory statutory consumer rights).</strong></p>
+
+        <h2>12. Consumer Dispute Resolution</h2>
+        <p>If you experience any issue with Capsule Notes, a subscription, or a purchase, please contact us directly at <a href="mailto:sumitkahar073@gmail.com">sumitkahar073@gmail.com</a> so we can review and resolve your concern promptly and fairly.</p>
+        <p>We are neither legally obligated nor committed to participate in dispute settlement proceedings before a consumer arbitration board or alternative dispute resolution (ADR) entity, without prejudice to your mandatory statutory rights to pursue claims before competent courts or consumer authorities.</p>
+
+        <h2>13. Termination</h2>
+        <p>You may stop using Capsule Notes and uninstall the App at any time. We may suspend or terminate your access to Cloud Sync or the App if you materially breach these Terms (such as billing manipulation or abuse of cloud services), or if we discontinue the App with reasonable prior notice.</p>
+        <p>Upon termination:</p>
         <ul>
-            <li>The App will be uninterrupted, secure, or error-free</li>
-            <li>Any defects will be corrected in a timely manner</li>
-            <li>The App will meet your specific requirements</li>
-            <li>Data synced to the cloud will always be available or intact</li>
+            <li>Your license to use the App ends</li>
+            <li>Locally stored notes remain on your device until you clear data or uninstall the App</li>
+            <li>If we terminate a paid service due to discontinuation rather than your breach, any mandatory statutory refund rights under applicable consumer law remain unaffected; otherwise, active subscriptions should be cancelled via Google Play to prevent future renewals</li>
+            <li>Synced cloud data will be retained for a reasonable period to allow export/resolution or deleted upon request</li>
         </ul>
 
-        <h2>10. Limitation of Liability</h2>
-        <p>To the maximum extent permitted by applicable law, the developer shall not be liable for any indirect,
-            incidental, special, consequential, or punitive damages, including but not limited to loss of data, loss of
-            profits, or business interruption, arising out of or in connection with your use of the App.</p>
-        <p>In no event shall the developer's total liability exceed the amount you have paid for the App in the twelve
-            (12) months preceding the claim.</p>
+        <h2>14. Changes to These Terms</h2>
+        <p>We may update these Terms from time to time to reflect app updates, legal changes, or pricing/feature changes. Updated Terms will be posted on this page with an updated "Last Updated" date. For material changes affecting paid services or user rights, we will provide reasonable advance notice inside the App or via appropriate channels.</p>
 
-        <h2>11. Termination</h2>
-        <p>We reserve the right to suspend or terminate your access to the App at any time, with or without cause,
-            including but not limited to violation of these Terms. Upon termination:</p>
-        <ul>
-            <li>Your license to use the App is revoked</li>
-            <li>Your locally stored data remains on your device unless you choose to delete it</li>
-            <li>Your cloud data may be deleted after a reasonable period following account termination</li>
-            <li>Active subscriptions will not be automatically refunded; you must cancel through Google Play</li>
-        </ul>
+        <h2>15. Governing Law &amp; Jurisdiction</h2>
+        <p>These Terms are governed by the laws of India, without regard to conflict of law principles. <strong>However, if you are a consumer residing in the European Union, EEA, or the United Kingdom, you also benefit from any mandatory provisions of the law of your country of residence and may bring legal proceedings in the competent courts of your country of residence.</strong></p>
 
-        <h2>12. Changes to These Terms</h2>
-        <p>We may update these Terms from time to time. Changes will be posted on this page with an updated "Last
-            Updated" date. Continued use of the App after changes constitutes acceptance of the updated Terms.</p>
-        <p>For significant changes, we will provide notice through the App or other appropriate means.</p>
+        <h2>16. Severability</h2>
+        <p>If any provision of these Terms is held invalid or unenforceable under applicable law, that provision shall be limited or removed to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.</p>
 
-        <h2>13. Governing Law</h2>
-        <p>These Terms shall be governed by and construed in accordance with the laws applicable in the jurisdiction
-            where the developer resides, without regard to conflict of law principles. Any disputes arising from these
-            Terms shall be resolved through good-faith negotiation, and if necessary, through the competent courts of
-            the applicable jurisdiction.</p>
-
-        <h2>14. Severability</h2>
-        <p>If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or
-            eliminated to the minimum extent necessary so that these Terms shall otherwise remain in full force and
-            effect.</p>
-
-        <h2>15. Contact Us</h2>
-        <p>If you have questions, concerns, or requests regarding these Terms of Service, please contact us:</p>
+        <h2>17. Contact Us &amp; Legal Notice (Impressum)</h2>
+        <p>If you have questions, consumer support requests, or require formal trader contact regarding Capsule Notes, please contact:</p>
 
         <div class="contact-box">
             <p><strong>App Name:</strong> Capsule Notes</p>
-            <p><strong>Developer:</strong> Sumit Kahar</p>
-            <p><strong>Email:</strong> <a href="mailto:sumitkahar073@gmail.com">sumitkahar073@gmail.com</a></p>
-            <p><strong>Package:</strong> io.github.capsule</p>
+            <p><strong>Developer / Trader:</strong> Sumit Kahar (Individual Commercial Developer / Trader)</p>
+            <p><strong>Trader Status:</strong> Declared Trader under EU Digital Services Act (Regulation (EU) 2022/2065)</p>
+            <p><strong>Legal Address:</strong> 438, Kaana Paar, Ramnagar, Dhani Bazar, Pharenda, Maharajganj - 273161, India</p>
+            <p><strong>Phone:</strong> <a href="tel:+919151382162">+91 9151382162</a></p>
+            <p><strong>Support Email:</strong> <a href="mailto:sumitkahar073@gmail.com">sumitkahar073@gmail.com</a></p>
+            <p><strong>Package Name:</strong> io.github.capsule</p>
+            <p><strong>Privacy Policy:</strong> <a href="https://sumitkahar992.github.io/capsule_notes_privacy/">View Privacy Policy</a></p>
         </div>
 
         <footer>
-            <p>&copy; 2026 Capsule Notes. All rights reserved.</p>
+            <p>&copy; 2026 Capsule Notes — Sumit Kahar. All rights reserved.</p>
         </footer>
     </div>
 </body>
